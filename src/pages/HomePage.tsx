@@ -3,15 +3,18 @@ import { Navbar } from '../components/layout/Navbar';
 import { NoticeCard } from '../components/notices/NoticeCard';
 import { useNotices } from '../contexts/NoticeContext';
 import { Alert } from '../components/ui/Alert';
+import Image from "../assets/BN1.jpg"
 
 export const HomePage: React.FC = () => {
   const { notices, loading } = useNotices();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Navbar />
-      
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="w-full flex items-center justify-center mt-[2%]">
+        <img src={Image} alt="Banner" className="h-full object-contain" />
+      </div>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-8 mt-[2%] shadow-md">
         <div className="text-center mb-10">
           <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
             Community Notice Board
@@ -20,7 +23,7 @@ export const HomePage: React.FC = () => {
             Stay updated with the latest announcements and important information
           </p>
         </div>
-        
+
         {loading ? (
           <div className="flex justify-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
@@ -37,7 +40,7 @@ export const HomePage: React.FC = () => {
           </div>
         )}
       </main>
-      
+
       <footer className="bg-white border-t mt-12 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-500 text-sm">
