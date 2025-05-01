@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
 import { AdminPage } from './pages/AdminPage';
 import { ProtectedRoute } from './routes/ProtectedRoute';
+import { NoticeDetailPage } from './pages/NoticeDetailPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route element={<ProtectedRoute requireAdmin={false} />}>
               <Route path="/admin" element={<AdminPage />} />
             </Route>
+            <Route path="/notice/:id" element={<NoticeDetailPage />} />
           </Routes>
         </NoticeProvider>
       </AuthProvider>
