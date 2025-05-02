@@ -187,7 +187,6 @@
 // };
 
 import React, { useState } from "react";
-import { Navbar } from "../components/layout/Navbar";
 import { Card, CardContent, CardHeader } from "../components/ui/Card";
 import { NoticeForm } from "../components/notices/NoticeForm";
 import { NoticeCard } from "../components/notices/NoticeCard";

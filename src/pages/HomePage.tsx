@@ -44,7 +44,7 @@ export const HomePage: React.FC = () => {
       <footer className="bg-white border-t mt-12 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Notice Board. All rights reserved.
+            &copy; {new Date().getFullYear()} Affiliated To VTU.
           </p>
         </div>
       </footer>
