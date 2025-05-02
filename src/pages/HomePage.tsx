@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from '../components/layout/Navbar';
+// import { Navbar } from '../components/layout/Navbar';
 import { NoticeCard } from '../components/notices/NoticeCard';
 import { useNotices } from '../contexts/NoticeContext';
 import { Alert } from '../components/ui/Alert';
@@ -10,7 +10,7 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="w-full flex items-center justify-center mt-[2%]">
         <img src={Image} alt="Banner" className="h-full object-contain" />
       </div>

@@ -7,12 +7,14 @@ import { LoginPage } from './pages/LoginPage';
 import { AdminPage } from './pages/AdminPage';
 import { ProtectedRoute } from './routes/ProtectedRoute';
 import { NoticeDetailPage } from './pages/NoticeDetailPage';
+import { Navbar } from './components/layout/Navbar';
 
 function App() {
   return (
     <Router>
       <AuthProvider>
         <NoticeProvider>
+          <Navbar/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />

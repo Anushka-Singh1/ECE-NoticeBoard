@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { Navbar } from '../components/layout/Navbar';
 import { Input } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
@@ -16,7 +16,7 @@ export const LoginPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   
-  const { signIn, signUp, signInWithGoogle, signInWithFacebook } = useAuth();
+  const { signIn, signUp } = useAuth();
   const navigate = useNavigate();
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -51,31 +51,31 @@ export const LoginPage: React.FC = () => {
     }
   };
   
-  const handleGoogleSignIn = async () => {
-    try {
-      setLoading(true);
-      await signInWithGoogle();
-      navigate('/');
-    } catch (err) {
-      console.error('Google sign in error:', err);
-      setError(err instanceof Error ? err.message : 'An error occurred with Google sign in');
-    } finally {
-      setLoading(false);
-    }
-  };
+  // const handleGoogleSignIn = async () => {
+  //   try {
+  //     setLoading(true);
+  //     await signInWithGoogle();
+  //     navigate('/');
+  //   } catch (err) {
+  //     console.error('Google sign in error:', err);
+  //     setError(err instanceof Error ? err.message : 'An error occurred with Google sign in');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
   
-  const handleFacebookSignIn = async () => {
-    try {
-      setLoading(true);
-      await signInWithFacebook();
-      navigate('/');
-    } catch (err) {
-      console.error('Facebook sign in error:', err);
-      setError(err instanceof Error ? err.message : 'An error occurred with Facebook sign in');
-    } finally {
-      setLoading(false);
-    }
-  };
+  // const handleFacebookSignIn = async () => {
+  //   try {
+  //     setLoading(true);
+  //     await signInWithFacebook();
+  //     navigate('/');
+  //   } catch (err) {
+  //     console.error('Facebook sign in error:', err);
+  //     setError(err instanceof Error ? err.message : 'An error occurred with Facebook sign in');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
   
   const toggleAuthMode = () => {
     setIsLogin(!isLogin);
