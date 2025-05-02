@@ -3,7 +3,7 @@ import { Navbar } from '../components/layout/Navbar';
 import { NoticeCard } from '../components/notices/NoticeCard';
 import { useNotices } from '../contexts/NoticeContext';
 import { Alert } from '../components/ui/Alert';
-import Image from "../assets/BN1.jpg"
+import Image from "../assets/Clg.banner.png"
 
 export const HomePage: React.FC = () => {
   const { notices, loading } = useNotices();
