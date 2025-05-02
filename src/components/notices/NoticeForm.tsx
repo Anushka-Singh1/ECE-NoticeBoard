@@ -298,6 +298,13 @@ export const NoticeForm: React.FC<NoticeFormProps> = ({
     setImage(null);
     setImagePreview(null);
     setKeepOldImage(false);
+    // Reset the file input by clearing its value
+    const fileInput = document.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
+    if (fileInput) {
+      fileInput.value = "";
+    }
   };
 
   const validate = () => {
@@ -338,6 +345,13 @@ export const NoticeForm: React.FC<NoticeFormProps> = ({
         setImage(null);
         setImagePreview(null);
         setKeepOldImage(true);
+        // Reset file input
+        const fileInput = document.querySelector(
+          'input[type="file"]'
+        ) as HTMLInputElement;
+        if (fileInput) {
+          fileInput.value = "";
+        }
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -380,6 +394,7 @@ export const NoticeForm: React.FC<NoticeFormProps> = ({
               className="hidden"
               accept="image/*"
               onChange={handleImageChange}
+              key={image ? "has-file" : "no-file"} // Force input recreation when image is removed
             />
           </label>
 
