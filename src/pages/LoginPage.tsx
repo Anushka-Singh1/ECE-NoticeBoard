@@ -84,7 +84,7 @@ export const LoginPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
+      {/* <Navbar /> */}
       
       <main className="max-w-md mx-auto px-4 py-12">
         <Card className="w-full">
